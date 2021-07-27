@@ -1,0 +1,25 @@
+.app {
+  display: grid;
+  grid-template-columns:
+    [full-start] 1fr [center-start] repeat(10, minmax(min-content, 14rem))
+    [center-end] 1fr [full-end];
+  grid-template-rows: 10rem [header-start] 70vh [header-end content-start] min-content [content-end] 10rem;
+
+  position: relative;
+
+  &__heading {
+    grid-column: center-start/center-end;
+
+    align-self: center;
+    justify-self: center;
+    font-size: 2.4rem;
+  }
+}
+.github-link {
+  display: block;
+  background-image: url("./assets/icons/github.svg");
+  width: 3rem;
+  height: 3rem;
+  background-size: cover;
+  margin: 0 auto;
+}

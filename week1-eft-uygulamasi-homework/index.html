@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>UZUM BANK EFT</title>
+  </head>
+  <body>
+    <!-- form-container-start -->
+    <div class="form__container">
+      <div class="logo">
+        <img src="./img/grape.png" alt="banana" class="logo__img" />
+        <h2>ÜzümBank</h2>
+
+        <h3>Merhaba<span id="kullaniciAdi"></span></h3>
+      </div>
+
+      <!-- form-start -->
+      <form action="#" class="form">
+        <div class="form__group">
+          <label for="ibanAlici" class="form__label">Alıcı Hesap</label
+          ><input
+            type="text"
+            class="form__input"
+            id="ibanAlici"
+            name="ibanAlici"
+            pattern=".{19,}"
+            maxlength="19"
+            required
+          />
+          <p class="form__warning">IBAN bilgisi giriniz. 16 karakter.</p>
+        </div>
+        <div class="form__group">
+          <label for="gonderilecekMiktar" class="form__label">Miktar</label
+          ><b>₺</b
+          ><input
+            type="number"
+            min="1"
+            class="form__input"
+            id="gonderilecekMiktar"
+            name="gonderilecekMiktar"
+            required
+          />
+          <p class="form__warning">
+            Miktar bilgisi giriniz. 1₺'den az veya hesabınızda bulunandan daha
+            fazla giremezsiniz.
+          </p>
+        </div>
+        <div class="form__group">
+          <button id="gonderBtn" class="form__btn">Gönder</button>
+        </div>
+      </form>
+      <!-- form-end -->
+    </div>
+    <!-- form-container-end -->
+
+    <script src="index.js"></script>
+  </body>
+</html>

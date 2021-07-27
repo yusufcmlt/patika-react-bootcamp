@@ -1,0 +1,45 @@
+@import "../../media-query";
+.header {
+  grid-column: full-start/full-end;
+  grid-row: header-start / header-end;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+
+  background-image: linear-gradient(
+      90deg,
+      rgba(#ff5d3d, 0.65) 50%,
+      rgba(#5137f3, 0.65) 50%
+    ),
+    url("../../assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+    background-image: linear-gradient(
+        180deg,
+        rgba(#ff5d3d, 0.65) 50%,
+        rgba(#5137f3, 0.65) 50%
+      ),
+      url("../../assets/background.jpg");
+  }
+
+  &__heading {
+    font-size: 4rem;
+
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+
+    &--firstline {
+      margin-right: 20rem;
+    }
+    &--secondline {
+      margin-left: 20rem;
+    }
+  }
+}

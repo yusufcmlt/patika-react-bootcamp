@@ -1,0 +1,59 @@
+@keyframes loadingEarth {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loadingPin {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+.loading {
+  //Visuals
+  background-color: white;
+  width: 30rem;
+  height: 30rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+
+  //Positioning on page center
+  position: absolute;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  //elements positioning
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    //Sizing
+    background-size: cover;
+    //Animation
+
+    &--earth {
+      width: 7rem;
+      height: 7rem;
+      background-image: url("../../assets/icons/earth-globe.svg");
+      animation: loadingEarth 2s linear infinite;
+    }
+    &--pin {
+      width: 4rem;
+      height: 4rem;
+      background-image: url("../../assets/icons/placeholder.svg");
+      animation: loadingPin 1s linear infinite;
+    }
+  }
+  &__text {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}
