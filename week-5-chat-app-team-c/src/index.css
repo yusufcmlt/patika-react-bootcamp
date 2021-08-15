@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Fixedsys Excelsior 3.01";
+  src: local("Fixedsys Excelsior 3.01"),
+    url("./assets/fonts/FSEX300.ttf") format("truetype");
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+#root {
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 87em) {
+  html {
+    font-size: 55%;
+  }
+}
+@media only screen and (max-width: 59em) {
+  html {
+    font-size: 45%;
+  }
+}

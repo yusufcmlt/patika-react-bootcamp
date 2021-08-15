@@ -1,0 +1,15 @@
+.game-map {
+  &__container {
+    grid-row: game-start/game-end;
+    grid-column: game-start/game-end;
+
+    box-shadow: rgba(0, 0, 0, 1) 1rem 1rem 1px 0px;
+    background-image: url("../../assets/maps/map1.png");
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 32px);
+    grid-template-rows: repeat(auto-fill, 32px);
+
+    position: relative;
+  }
+}

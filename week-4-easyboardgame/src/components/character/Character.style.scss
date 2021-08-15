@@ -1,0 +1,19 @@
+.character {
+  &__box {
+    position: absolute;
+
+    border: 1px solid black;
+    background-image: url("../../assets//characters/owlet_monster_run.png");
+
+    font-size: 0.7rem;
+  }
+  &--owlet {
+    background-image: url("../../assets//characters/owlet_monster_run.png");
+  }
+  &--dude {
+    background-image: url("../../assets//characters/dude_monster_run.png");
+  }
+  &--pink {
+    background-image: url("../../assets//characters/pink_monster_run.png");
+  }
+}
